@@ -14,9 +14,17 @@ var server = http.createServer(app);
 
 // Create the settings object - see default settings.js file for other options
 var settings = {
-	nodesDir: "/Users/allomov/work/altoros/node-red/app/nodes",
+		nodesDir: "/Users/allomov/work/altoros/node-red/app/nodes",
     httpAdminRoot:"/",
     httpNodeRoot: "/api",
+		adminAuth: {
+			 type: "credentials",
+				users: [{
+						username: "Masoud",
+						password: "$2a$08$d/wxc5geBzndNMiObBqaj.sgVxH.9SvCDMg/3xrcVg8VwkPuoTCli",
+						permissions: "*"
+				}]
+		},
     uiPort: 8080,
     functionGlobalContext: { }    // enables global context
 };
