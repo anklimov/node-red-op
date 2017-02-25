@@ -5,7 +5,6 @@
     },
     "dependencies": {
         "express": "4.10.x",
-        "node-red": "0.x",
-        "node-red-contrib-freeboard": "0.0.7"
+        "node-red": "0.x"
     }
 }
