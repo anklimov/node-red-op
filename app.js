@@ -17,6 +17,7 @@ var settings = {
 //		nodesDir: "/Users/Masoud/node-red/app/nodes",
     httpAdminRoot:"/",
     httpNodeRoot: "/api",
+    userDir: process.env.OPENSHIFT_DATA_DIR,
 		adminAuth: {
 			 type: "credentials",
 				users: [{
