@@ -14,10 +14,9 @@ var server = http.createServer(app);
 
 // Create the settings object - see default settings.js file for other options
 var settings = {
-		nodesDir:process.env.OPENSHIFT_DATA_DIR,
+		userDir: process.env.OPENSHIFT_DATA_DIR,
     httpAdminRoot:"/",
     httpNodeRoot: "/api",
-		userDir: process.env.OPENSHIFT_DATA_DIR,
 		adminAuth: {
 			 type: "credentials",
 				users: [{
