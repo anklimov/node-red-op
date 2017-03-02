@@ -15,13 +15,15 @@ var server = http.createServer(app);
 // Create the settings object - see default settings.js file for other options
 var settings = {
 		userDir: process.env.OPENSHIFT_DATA_DIR,
+		nodesDir: process.env.OPENSHIFT_DATA_DIR,
+		flowFile: "Flows.json",
     httpAdminRoot:"/",
     httpNodeRoot: "/api",
 		adminAuth: {
 			 type: "credentials",
 				users: [{
 						username: "Masoud",
-						password: "$2a$08$d/wxc5geBzndNMiObBqaj.sgVxH.9SvCDMg/3xrcVg8VwkPuoTCli",
+						password: "$2a$08$0NAscLH2.JnFmpB8YsG5UOPCnjMsLorMakB0vWfpB.BfpUdcjqs.u",
 						permissions: "*"
 				}]
 		},

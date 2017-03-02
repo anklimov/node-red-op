@@ -5,6 +5,8 @@
     },
     "dependencies": {
         "express": "4.x",
-        "node-red": "0.x"
+        "node-red": "0.x",
+        "node-red-node-base64": "0.x",
+        "node-red-dashboard": "2.x"
     }
 }
