@@ -27,7 +27,7 @@ var settings = {
 						permissions: "*"
 				}]
 		},
-    uiPort: 8080,
+    uiPort: process.env.PORT,
     functionGlobalContext: { }    // enables global context
 };
 
@@ -40,7 +40,7 @@ app.use(settings.httpAdminRoot,RED.httpAdmin);
 // Serve the http nodes UI from /api
 app.use(settings.httpNodeRoot,RED.httpNode);
 
-server.listen(8080);
+server.listen(settings.uiPort);
 
 // Start the runtime
 RED.start();
