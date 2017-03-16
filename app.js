@@ -22,8 +22,8 @@ var settings = {
 		adminAuth: {
 			 type: "credentials",
 				users: [{
-						username: "Masoud",
-						password: "$2a$08$0NAscLH2.JnFmpB8YsG5UOPCnjMsLorMakB0vWfpB.BfpUdcjqs.u",
+						username: "admin",
+						password: "$2a$06$dw8XHjL3Psh/UBZg./ouGuB5hUJT8qrBtNSGYxeTOFyB3w3JMpKze",
 						permissions: "*"
 				}]
 		},
