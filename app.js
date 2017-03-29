@@ -36,7 +36,7 @@ var settings = {
 if (typeof settings.uiPort       === "undefined") {
             //  Log errors on OpenShift but continue w/ 8000 
             console.warn('No OPENSHIFT_NODEJS_PORT var, using 8080');
-			settings.uiPort       = "8000";
+			settings.uiPort       = "8080";
         };
 
 if (typeof settings.uiHost === "undefined") {
