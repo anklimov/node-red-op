@@ -27,9 +27,30 @@ var settings = {
 						permissions: "*"
 				}]
 		},
-    uiPort: process.env.PORT,
+	uiHost: process.env.OPENSHIFT_NODEJS_IP,
+    uiPort: process.env.OPENSHIFT_NODEJS_PORT,
     functionGlobalContext: { }    // enables global context
 };
+
+
+if (typeof settings.uiPort       === "undefined") {
+            //  Log errors on OpenShift but continue w/ 8000 
+            console.warn('No OPENSHIFT_NODEJS_PORT var, using 8080');
+			settings.uiPort       = "8000";
+        };
+
+if (typeof settings.uiHost === "undefined") {
+            //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
+            //  allows us to run/test the app locally.
+            console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1');
+			settings.uiHost = "127.0.0.1";
+        };
+
+
+  if (typeof settings.userDir === "undefined") {
+            console.warn('No OPENSHIFT_DATA_DIR var, using ./');
+            settings.userDir = "./";
+        };
 
 // Initialise the runtime with a server and settings
 RED.init(server,settings);
