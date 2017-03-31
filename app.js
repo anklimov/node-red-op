@@ -61,7 +61,9 @@ app.use(settings.httpAdminRoot,RED.httpAdmin);
 // Serve the http nodes UI from /api
 app.use(settings.httpNodeRoot,RED.httpNode);
 
-server.listen(settings.uiPort);
+server.listen(settings.uiPort, settings.uiHost, function () {
+  console.log( "Listening on " + settings.uiHost + ", port " + settings.uiPort )
+});
 
 // Start the runtime
 RED.start();
