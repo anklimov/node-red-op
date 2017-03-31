@@ -3,6 +3,7 @@
     "scripts": {
         "start": "node app.js"
     },
+    "main": "app.js",
     "dependencies": {
         "express": "4.x",
         "node-red": "0.x",
