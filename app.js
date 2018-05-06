@@ -23,7 +23,7 @@ var settings = {
 			 type: "credentials",
 				users: [{
 						username: "admin",
-						password: "09fb6b4ae6ba5cba3762e2bd939aaa2",
+						password: "809fb6b4ae6ba5cba3762e2bd939aaa2",
 						permissions: "*"
 				}]
 		},
